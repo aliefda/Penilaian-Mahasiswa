@@ -61,7 +61,7 @@ class MahasiswaController extends Controller
 
         $mahasiswa->save();
 
-        return redirect('/mahasiswa')->with(['message', 'Data Berhasil Ditambahkan']);
+        return redirect('/admin/mahasiswa')->with(['message', 'Data Berhasil Ditambahkan']);
     }
 
     /**
@@ -105,7 +105,7 @@ class MahasiswaController extends Controller
     
         $mahasiswa->save();
     
-        return redirect('/mahasiswa')->with('message', 'Data Berhasil Diupdate');
+        return redirect('/admin/mahasiswa')->with('message', 'Data Berhasil Diupdate');
     }
 
     /**
@@ -115,6 +115,6 @@ class MahasiswaController extends Controller
     {
         $mahasiswa->delete();
 
-        return redirect('/mahasiswa')->with('message', 'Data Berhasil Dihapus');
+        return redirect('/admin/mahasiswa')->with('message', 'Data Berhasil Dihapus');
     }
 }

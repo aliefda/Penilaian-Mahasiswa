@@ -19,20 +19,28 @@ use App\Http\Controllers\HomeController;
 
 //Auth
 Route::get('/login', [AuthController::class, 'login'])->name('login');
-Route::post('/login', [AuthController::class, 'authenticated']);
+Route::post('/login', [AuthController::class, 'authenticatedLogin']);
 Route::get('/logout', [AuthController::class, 'logout']);
 
-//Home
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+//Register
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/register', [AuthController::class, 'authenticatedRegister'])->name('authenticatedRegister');
 
-//Dashboard
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::prefix('/admin')->middleware('auth')->group(function() {
+    //Home
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-//Mahasiswa
-Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa.index');
-Route::get('/mahasiswa/create', [MahasiswaController::class, 'create'])->name('mahasiswa.create');
-Route::post('/mahasiswa', [MahasiswaController::class, 'store'])->name('mahasiswa.store');
-Route::get('/mahasiswa/{mahasiswa}', [MahasiswaController::class, 'show'])->name('mahasiswa.show');
-Route::get('/mahasiswa/{mahasiswa}/edit', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
-Route::put('/mahasiswa/{mahasiswa}', [MahasiswaController::class, 'update'])->name('mahasiswa.update');
-Route::delete('/mahasiswa/{mahasiswa}', [MahasiswaController::class, 'destroy'])->name('mahasiswa.destroy');
+    //Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+
+    //Mahasiswa
+    Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa.index');
+    Route::get('/mahasiswa/create', [MahasiswaController::class, 'create'])->name('mahasiswa.create');
+    Route::post('/mahasiswa', [MahasiswaController::class, 'store'])->name('mahasiswa.store');
+    Route::get('/mahasiswa/{mahasiswa}', [MahasiswaController::class, 'show'])->name('mahasiswa.show');
+    Route::get('/mahasiswa/{mahasiswa}/edit', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
+    Route::put('/mahasiswa/{mahasiswa}', [MahasiswaController::class, 'update'])->name('mahasiswa.update');
+    Route::delete('/mahasiswa/{mahasiswa}', [MahasiswaController::class, 'destroy'])->name('mahasiswa.destroy');
+
+});
+

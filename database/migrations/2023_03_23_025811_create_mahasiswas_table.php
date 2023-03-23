@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('nilai_uas');
             $table->string('rata_rata');
             $table->string('grade');
-            $table->string('aksi');
             $table->timestamps();
         });
     }

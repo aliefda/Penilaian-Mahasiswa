@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container">
-    <a href="/mahasiswa" class="btn btn-primary mb-3">Kembali</a>
+    <a href="/admin/mahasiswa" class="btn btn-primary mb-3">Kembali</a>
     <div class="row">
         <div class="col-md-12">
             <form method="POST" action="{{ route('mahasiswa.store') }}" enctype="multipart/form-data">

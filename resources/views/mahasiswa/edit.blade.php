@@ -19,7 +19,7 @@
         <small style="color: red">{{$message}}</small>
     @enderror
     <div class="form-group">
-        <label for="nilai_quis">Nilai Quis</label>
+        <label for="nilai_quis">Nilai Quiz</label>
         <input type="number" class="form-control" id="nilai_quis" name="nilai_quis" value="{{$mahasiswa->nilai_quis}}">
     </div>
     @error('nilai_tugas')

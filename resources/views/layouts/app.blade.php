@@ -35,7 +35,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="/lte/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">User Menu</span>
+      <span class="brand-text font-weight-light">Admin Menu</span>
     </a>
 
     <!-- Sidebar -->
@@ -54,7 +54,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
-                <a href="/dashboard" class="nav-link">
+                <a href="/admin/dashboard" class="nav-link">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>Dashboard</p>
                 </a>
@@ -69,19 +69,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="/mahasiswa" class="nav-link">
+                    <a href="/admin/mahasiswa" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Input Data Mahasiswa</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/home" target="_blank" class="nav-link">
+                  <a href="/admin/home" target="_blank" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>List Nilai Mahasiswa</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="/logout" class="nav-link">
                         <i class="nav-icon fas fa-arrow-left"></i>
                         <p>Logout</p>
                     </a>
